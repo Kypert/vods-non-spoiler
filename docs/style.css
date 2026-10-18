@@ -73,11 +73,23 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
   #controls .speed, #elapsed, #fs { flex: 1 1 30%; }
 }
 
-/* Full screen (native, or CSS fallback for iPhone): video fills, controls stay at the bottom */
-#wrap:fullscreen, body.pseudo-fs #wrap { width: 100vw; height: 100dvh; padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); background: #000; }
+/* Full screen (native, or CSS fallback for iPhone): the video fills all, the controls float
+   over its bottom edge and fade out while playing (JS sets .controls-hidden) */
+#wrap:fullscreen, body.pseudo-fs #wrap {
+  position: relative; width: 100vw; height: 100dvh; padding: 0; background: #000;
+}
 body.pseudo-fs { overflow: hidden; }
 body.pseudo-fs #wrap { position: fixed; inset: 0; z-index: 10; }
 #wrap:fullscreen #top, body.pseudo-fs #top, #wrap:fullscreen #msg, body.pseudo-fs #msg, #wrap:fullscreen #after, body.pseudo-fs #after { display: none; }
 #wrap:fullscreen #stage, body.pseudo-fs #stage { flex: 1; aspect-ratio: auto; min-height: 0; }
-#wrap:fullscreen #controls, body.pseudo-fs #controls { margin: 0; padding: .3rem; flex-wrap: nowrap; overflow-x: auto; }
+#wrap:fullscreen #controls, body.pseudo-fs #controls {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; margin: 0;
+  padding: 1.5rem max(.5rem, env(safe-area-inset-right)) max(.5rem, env(safe-area-inset-bottom)) max(.5rem, env(safe-area-inset-left));
+  flex-wrap: nowrap; overflow-x: auto;
+  background: linear-gradient(transparent, rgb(0 0 0 / .8));
+  transition: opacity .25s;
+}
 #wrap:fullscreen #controls > *, body.pseudo-fs #controls > * { flex: none; }
+#wrap.controls-hidden #controls { opacity: 0; pointer-events: none; }
+#wrap.controls-hidden { cursor: none; }
+@media (prefers-reduced-motion: reduce) { #controls { transition: none; } }

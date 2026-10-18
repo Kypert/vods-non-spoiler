@@ -70,7 +70,7 @@ async function main() {
 // Real full screen where the browser supports it on elements (desktop, Android). iPhone
 // Safari supports it only on <video>, and the video is inside YouTube's iframe, so there we
 // fill the window with CSS. Turn the phone to landscape to get a big picture.
-function setupFullscreen() {
+function setupFullscreen(onChange) {
   const wrap = $("wrap");
   const btn = $("fs");
   const native = wrap.requestFullscreen || wrap.webkitRequestFullscreen;
@@ -78,14 +78,18 @@ function setupFullscreen() {
   const sync = () => {
     btn.textContent = isOn() ? "Exit full screen" : "Full screen";
     btn.setAttribute("aria-pressed", String(isOn()));
+    onChange();
+  };
+  const exit = async () => {
+    document.body.classList.remove("pseudo-fs");
+    if (document.fullscreenElement) await document.exitFullscreen().catch(() => {});
+    else if (document.webkitFullscreenElement) document.webkitExitFullscreen();
+    sync();
   };
 
   btn.addEventListener("click", async () => {
     if (isOn()) {
-      document.body.classList.remove("pseudo-fs");
-      if (document.fullscreenElement) await document.exitFullscreen();
-      else if (document.webkitFullscreenElement) document.webkitExitFullscreen();
-      sync();
+      await exit();
       return;
     }
     if (native) {
@@ -102,12 +106,35 @@ function setupFullscreen() {
     document.body.classList.add("pseudo-fs");
     sync();
   });
+  // Native full screen exits on Escape or the Android back gesture by itself, the CSS one does not
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && document.body.classList.contains("pseudo-fs")) exit();
+  });
   document.addEventListener("fullscreenchange", sync);
   document.addEventListener("webkitfullscreenchange", sync);
+  return { isOn, exit };
 }
 
+// In full screen, the controls float over the video and hide after a few seconds of play.
+// A tap on the video shows them again. When paused, they stay visible.
+const HIDE_AFTER_MS = 3000;
+
 function setup(videoId) {
-  setupFullscreen();
+  const wrap = $("wrap");
+  let playing = false;
+  let hideTimer;
+  const controlsHidden = () => wrap.classList.contains("controls-hidden");
+  const hideControls = () => {
+    clearTimeout(hideTimer);
+    if (fs.isOn() && playing) wrap.classList.add("controls-hidden");
+  };
+  const showControls = () => {
+    clearTimeout(hideTimer);
+    wrap.classList.remove("controls-hidden");
+    if (fs.isOn() && playing) hideTimer = setTimeout(hideControls, HIDE_AFTER_MS);
+  };
+  const fs = setupFullscreen(showControls);
+
   const tag = document.createElement("script");
   tag.src = "https://www.youtube.com/iframe_api";
   document.head.append(tag);
@@ -125,18 +152,18 @@ function setup(videoId) {
       events: {
         onReady: applySpeed,
         onStateChange: (e) => {
-          const playing = e.data === YT.PlayerState.PLAYING;
+          playing = e.data === YT.PlayerState.PLAYING;
           if (playing) started = true;
           cover.classList.toggle("clear", playing);
           cover.classList.remove("passthrough");
           cover.textContent = e.data === YT.PlayerState.PAUSED ? "Paused" : "Tap to play";
           $("play").textContent = playing ? "Pause" : "Play";
           if (playing && player.getPlaybackRate() !== Number(speed.value)) applySpeed();
+          showControls();
           if (e.data === YT.PlayerState.ENDED) {
             clearInterval(timer);
             player.destroy();
-            document.body.classList.remove("pseudo-fs");
-            if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+            fs.exit();
             $("stage").hidden = true;
             $("controls").hidden = true;
             msg.textContent = "Game finished.";
@@ -168,7 +195,19 @@ function setup(videoId) {
   };
   const seek = (d) => player?.seekTo && player.seekTo(Math.max(0, player.getCurrentTime() + d), true);
 
-  cover.addEventListener("click", toggle);
+  // In full screen while playing, a tap on the video shows or hides the controls instead of
+  // pausing, so you do not pause by mistake. Pause with the Play/Pause button.
+  cover.addEventListener("click", () => {
+    if (fs.isOn() && playing) {
+      if (controlsHidden()) showControls();
+      else hideControls();
+      return;
+    }
+    toggle();
+  });
+  const controls = $("controls");
+  controls.addEventListener("pointerdown", showControls);
+  controls.addEventListener("focusin", showControls);
   $("play").addEventListener("click", toggle);
   document.querySelectorAll("[data-seek]").forEach((b) => b.addEventListener("click", () => seek(Number(b.dataset.seek))));
   speed.addEventListener("change", () => {
@@ -176,6 +215,7 @@ function setup(videoId) {
     if (player) applySpeed();
   });
   document.addEventListener("keydown", (e) => {
+    showControls();
     if (e.target instanceof HTMLSelectElement) return;
     if (e.key === " " || e.key === "k") { e.preventDefault(); toggle(); }
     else if (e.key === "ArrowLeft") seek(e.shiftKey ? -60 : -10);
