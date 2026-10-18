@@ -1,0 +1,83 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; --tap: 44px; }
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto; max-width: 1100px; background: #111; color: #eee;
+  padding: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) 1rem max(1rem, env(safe-area-inset-left));
+}
+h1 { font-size: 1.4rem; margin: 0 0 .25rem; }
+a { color: #8cf; }
+.hint { color: #aaa; font-size: .85rem; margin: 0 0 1rem; }
+nav { margin-bottom: .75rem; }
+nav a { display: inline-flex; align-items: center; min-height: var(--tap); }
+button, select {
+  font: inherit; background: #222; color: #eee; border: 1px solid #444; border-radius: 6px;
+  min-height: var(--tap); padding: .3rem .7rem; cursor: pointer;
+}
+button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid #8cf; outline-offset: 2px; }
+
+/* Tournament list */
+.tournaments { list-style: none; padding: 0; }
+.tournaments li { padding: .5rem 0; border-bottom: 1px solid #222; }
+.tournaments a { font-size: 1.1rem; display: inline-flex; align-items: center; min-height: var(--tap); }
+.dates { color: #888; font-size: .85rem; }
+
+/* Stage tabs: one row that scrolls sideways on small screens */
+.tabs { display: flex; gap: .4rem; overflow-x: auto; padding-bottom: .4rem; border-bottom: 1px solid #333; scrollbar-width: none; }
+.tabs [role=tab] { flex: none; background: transparent; border-color: #333; }
+.tabs [role=tab][aria-selected=true] { background: #234; border-color: #8cf; }
+
+/* Days and series */
+.day-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 1rem; }
+.day-head h3 { margin: 0; font-size: 1rem; }
+.reveal { font-size: .85rem; }
+.matches { list-style: none; padding: 0; margin: .25rem 0; }
+.match {
+  display: grid; grid-template-columns: 3.5rem 1fr auto; gap: .5rem 1rem; align-items: center;
+  padding: .5rem 0; border-bottom: 1px solid #222;
+}
+.start { color: #aaa; font-variant-numeric: tabular-nums; }
+.games { display: flex; gap: .4rem; }
+.game {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: var(--tap); min-height: var(--tap); border-radius: 6px; background: #234; text-decoration: none;
+}
+.game.watched { background: #2a2a2a; color: #888; }
+.game.pending { background: #1a1a1a; color: #555; }
+/* Phones: games go on their own row below time and name */
+@media (max-width: 560px) {
+  .match { grid-template-columns: 3.5rem 1fr; }
+  .games { grid-column: 1 / -1; }
+  .game { flex: 1; }
+}
+
+/* Player */
+.player-page #wrap { display: flex; flex-direction: column; background: #111; }
+#stage { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+#frame, #frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+#cover {
+  position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0;
+  border: 0; border-radius: 0; background: #000; font-size: 1.4rem;
+  -webkit-tap-highlight-color: transparent;
+}
+/* When playing, the cover is clear but still catches taps, so YouTube shows no UI */
+#cover.clear { background: transparent; color: transparent; }
+/* Fallback when the browser blocks a scripted first play */
+#cover.passthrough { pointer-events: none; }
+#controls { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: .5rem; }
+#controls .speed { display: inline-flex; align-items: center; gap: .3rem; }
+#elapsed { font-variant-numeric: tabular-nums; min-width: 4.5rem; text-align: center; }
+#msg { font-size: 1.1rem; }
+#after a { display: inline-flex; align-items: center; min-height: var(--tap); font-size: 1.1rem; }
+@media (max-width: 560px) {
+  #controls [data-seek], #play { flex: 1 1 18%; }
+  #controls .speed, #elapsed, #fs { flex: 1 1 30%; }
+}
+
+/* Full screen (native, or CSS fallback for iPhone): video fills, controls stay at the bottom */
+#wrap:fullscreen, body.pseudo-fs #wrap { width: 100vw; height: 100dvh; padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); background: #000; }
+body.pseudo-fs { overflow: hidden; }
+body.pseudo-fs #wrap { position: fixed; inset: 0; z-index: 10; }
+#wrap:fullscreen #top, body.pseudo-fs #top, #wrap:fullscreen #msg, body.pseudo-fs #msg, #wrap:fullscreen #after, body.pseudo-fs #after { display: none; }
+#wrap:fullscreen #stage, body.pseudo-fs #stage { flex: 1; aspect-ratio: auto; min-height: 0; }
+#wrap:fullscreen #controls, body.pseudo-fs #controls { margin: 0; padding: .3rem; flex-wrap: nowrap; overflow-x: auto; }
+#wrap:fullscreen #controls > *, body.pseudo-fs #controls > * { flex: none; }

@@ -1,0 +1,501 @@
+{
+  "tournament": "demacia_cup_2026",
+  "name": "Demacia Cup 2026",
+  "generated": "2026-10-18T21:33:48.170243505Z",
+  "stages": [
+    {
+      "name": "Swiss",
+      "days": [
+        {
+          "date": "2026-10-03",
+          "matches": [
+            {
+              "id": "117133805552196841",
+              "start": "2026-10-03T08:00:00Z",
+              "teams": [
+                "RED",
+                "NAVI"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "BeATa_u-Tps",
+                "",
+                ""
+              ]
+            },
+            {
+              "id": "117133805552262379",
+              "start": "2026-10-03T09:00:00Z",
+              "teams": [
+                "FLY",
+                "LGD"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "wSfQ2yyOPS8",
+                "",
+                ""
+              ]
+            },
+            {
+              "id": "117133805552262381",
+              "start": "2026-10-03T10:00:00Z",
+              "teams": [
+                "KT",
+                "SR"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "cNbZrYptIKc",
+                "",
+                ""
+              ]
+            },
+            {
+              "id": "117133805552262383",
+              "start": "2026-10-03T11:00:00Z",
+              "teams": [
+                "BFX",
+                "VIT"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "eTI01Bbj7TE",
+                "",
+                ""
+              ]
+            },
+            {
+              "id": "117133805552262385",
+              "start": "2026-10-03T12:00:00Z",
+              "teams": [
+                "WE",
+                "GAM"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "IWOozir6sOY",
+                "",
+                ""
+              ]
+            },
+            {
+              "id": "117133805552262387",
+              "start": "2026-10-03T13:00:00Z",
+              "teams": [
+                "JDG",
+                "BRO"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "qMTRDLpaMlM",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-10-04",
+          "matches": [
+            {
+              "id": "117133805552262389",
+              "start": "2026-10-04T07:00:00Z",
+              "teams": [
+                "BFX",
+                "LGD"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "4x-0Vaceh6o",
+                "K8K_DWnWp5M",
+                "Rf_AVru7ilM"
+              ]
+            },
+            {
+              "id": "117133805552262393",
+              "start": "2026-10-04T09:00:00Z",
+              "teams": [
+                "KT",
+                "RED"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "Q487MTLsaRI",
+                "b4Rsb9fNZog",
+                ""
+              ]
+            },
+            {
+              "id": "117133805552262397",
+              "start": "2026-10-04T11:00:00Z",
+              "teams": [
+                "WE",
+                "BRO"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "WECUNFrSfJc",
+                "7yhiEP3O5d4",
+                "J5qEn-pnCr4"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-10-05",
+          "matches": [
+            {
+              "id": "117133805552262401",
+              "start": "2026-10-05T07:00:00Z",
+              "teams": [
+                "VIT",
+                "GAM"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "GXbZ7ipmxok",
+                "J1WIV26aVcw",
+                ""
+              ]
+            },
+            {
+              "id": "117133805552262405",
+              "start": "2026-10-05T09:00:00Z",
+              "teams": [
+                "FLY",
+                "NAVI"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "fPioqm_RN-w",
+                "v8WjcBDb-z4",
+                ""
+              ]
+            },
+            {
+              "id": "117133805552262409",
+              "start": "2026-10-05T11:00:00Z",
+              "teams": [
+                "JDG",
+                "SR"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "57wK5KNjVHA",
+                "rTkW5cwi9Zw",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-10-06",
+          "matches": [
+            {
+              "id": "117133805552262413",
+              "start": "2026-10-06T07:00:00Z",
+              "teams": [
+                "BRO",
+                "NAVI"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "7J1HB0KaaYs",
+                "dT0hq8Wkz4g",
+                "jMr88Syq4j0"
+              ]
+            },
+            {
+              "id": "117133805552262417",
+              "start": "2026-10-06T09:00:00Z",
+              "teams": [
+                "RED",
+                "VIT"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "ENDREZhXTeo",
+                "mUT7RNT_V3o",
+                ""
+              ]
+            },
+            {
+              "id": "117133805552262421",
+              "start": "2026-10-06T11:00:00Z",
+              "teams": [
+                "JDG",
+                "LGD"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "7cCHJFd51D0",
+                "ZHZ1WTgGffE",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-10-07",
+          "matches": [
+            {
+              "id": "117133816701918794",
+              "start": "2026-10-07T07:00:00Z",
+              "teams": [
+                "FLY",
+                "GAM"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "saVQK9CywrQ",
+                "I-ObFt3JwLg",
+                ""
+              ]
+            },
+            {
+              "id": "117133816701918798",
+              "start": "2026-10-07T09:00:00Z",
+              "teams": [
+                "GAM",
+                "SR"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "VzLaAA7xDCU",
+                "m9se5MMaCUY",
+                ""
+              ]
+            },
+            {
+              "id": "117133816701918802",
+              "start": "2026-10-07T11:00:00Z",
+              "teams": [
+                "SR",
+                "FLY"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "jpfdm_RImTk",
+                "Kv2wGs83v5E",
+                "3Ivod4d0VWM"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-10-08",
+          "matches": [
+            {
+              "id": "117133830114188936",
+              "start": "2026-10-08T09:00:00Z",
+              "teams": [
+                "RED",
+                "FLY"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "Ar5G0Y2myPE",
+                "AOQzG2RqES8",
+                ""
+              ]
+            },
+            {
+              "id": "117133830114188940",
+              "start": "2026-10-08T11:00:00Z",
+              "teams": [
+                "JDG",
+                "NAVI"
+              ],
+              "slots": 3,
+              "ready": true,
+              "games": [
+                "c3deQN1OUS4",
+                "aPlnWINt53g",
+                "iwLwbw1ml9A"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quarterfinals",
+      "days": [
+        {
+          "date": "2026-10-12",
+          "matches": [
+            {
+              "id": "117133830110912099",
+              "start": "2026-10-12T06:00:00Z",
+              "teams": [
+                "KT",
+                "VIT"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "x3Zj3-0FOsU",
+                "L07pNDWoNYc",
+                "-WJbLbmRHJk",
+                "PyD1FU2Lzes",
+                "0iew6wQU0x8"
+              ]
+            },
+            {
+              "id": "117133830110912093",
+              "start": "2026-10-12T09:00:00Z",
+              "teams": [
+                "BFX",
+                "JDG"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "m6SZFVk8ihY",
+                "Lv4F1_koC6s",
+                "ELxlkJHnb_0",
+                "3O1uhlTcRLM",
+                "XTTNMmyQwv0"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-10-13",
+          "matches": [
+            {
+              "id": "117133830110912105",
+              "start": "2026-10-13T06:00:00Z",
+              "teams": [
+                "WE",
+                "FLY"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "H9TEj_sMe0k",
+                "3UX_HSn08Mg",
+                "ZIpkQOJX5JI",
+                "hjpDEwTrwps",
+                "a80lKfRClzE"
+              ]
+            },
+            {
+              "id": "117133830110912111",
+              "start": "2026-10-13T09:00:00Z",
+              "teams": [
+                "BRO",
+                "LGD"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "hYD6rWjRinI",
+                "Z1QJHEv8hww",
+                "jvGrwVhWygU",
+                "zFfq6ioDf0w",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semifinals",
+      "days": [
+        {
+          "date": "2026-10-14",
+          "matches": [
+            {
+              "id": "117133830110912117",
+              "start": "2026-10-14T09:00:00Z",
+              "teams": [
+                "KT",
+                "BFX"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "dpc3YCRf2CU",
+                "LUnbUdATOy4",
+                "bZa59E86ggw",
+                "FOeGkDdzQCU",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "matches": [
+            {
+              "id": "117133830110912123",
+              "start": "2026-10-15T09:00:00Z",
+              "teams": [
+                "BRO",
+                "WE"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "mcPezTNPeNU",
+                "Tcd2N9cvI-k",
+                "dLXG0QHQkDI",
+                "FzSD_DC6a04",
+                "B38oBAX3GbI"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Finals",
+      "days": [
+        {
+          "date": "2026-10-17",
+          "matches": [
+            {
+              "id": "117133830110912129",
+              "start": "2026-10-17T09:00:00Z",
+              "teams": [
+                "WE",
+                "BFX"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "dHr-8WUWVJU",
+                "up15UnWG-5Y",
+                "oCJa0JrFRGw",
+                "WkcQbPDWTSc",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

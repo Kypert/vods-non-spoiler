@@ -1,0 +1,6 @@
+# Upload cache, contains titles such as "Game 4" (spoilers)
+.state/
+# Local secrets, see .env.example
+.env
+*.test
+/vodsync
