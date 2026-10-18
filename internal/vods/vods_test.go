@@ -64,7 +64,7 @@ func TestJoinPicksLatestSeriesAndTeamOrder(t *testing.T) {
 		video("v1", "AAA vs BBB - Game 1 | x", t0.Add(time.Hour)),
 		video("v2", "AAA vs BBB - Game 1 | x", t0.Add(31*time.Hour)),
 		video("v3", "BBB vs AAA - Game 2 | x", t0.Add(32*time.Hour)),
-		video("old", "AAA vs BBB - Game 1 | x", t0.Add(-time.Hour)),
+		video("old", "AAA vs BBB - Game 1 | x", t0.Add(-MaxUploadEarly-time.Hour)),
 		video("late", "AAA vs BBB - Game 3 | x", t0.Add(30*time.Hour+MaxUploadDelay+time.Hour)),
 	}
 	got, unmatched := Join(matches, videos, nil, "")
@@ -73,6 +73,23 @@ func TestJoinPicksLatestSeriesAndTeamOrder(t *testing.T) {
 	}
 	if len(unmatched) != 2 {
 		t.Fatalf("unmatched = %v", unmatched)
+	}
+}
+
+func TestJoinEarlyUpload(t *testing.T) {
+	// Riot's start time is late, the first game is uploaded before it. A rematch next day
+	// must still get its own uploads.
+	matches := []riot.Match{
+		match("m1", "Play-Ins", t0, 5, "AAA", "BBB", 3, 0),
+		match("m2", "Play-Ins", t0.Add(24*time.Hour), 5, "AAA", "BBB", 3, 0),
+	}
+	videos := []youtube.Video{
+		video("early", "AAA vs BBB - Game 1 | x", t0.Add(-80*time.Minute)),
+		video("rematch", "AAA vs BBB - Game 1 | x", t0.Add(25*time.Hour)),
+	}
+	got, unmatched := Join(matches, videos, nil, "")
+	if got["m1"][1] != "early" || got["m2"][1] != "rematch" || len(unmatched) != 0 {
+		t.Fatalf("join = %v, unmatched = %v", got, unmatched)
 	}
 }
 

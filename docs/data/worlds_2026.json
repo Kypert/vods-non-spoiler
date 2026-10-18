@@ -1,0 +1,634 @@
+{
+  "tournament": "worlds_2026",
+  "name": "Worlds 2026",
+  "generated": "2026-10-18T22:07:26.068454864Z",
+  "stages": [
+    {
+      "name": "Play-Ins",
+      "days": [
+        {
+          "date": "2026-10-15",
+          "matches": [
+            {
+              "id": "115660588583171786",
+              "start": "2026-10-15T18:00:00Z",
+              "teams": [
+                "KC",
+                "C9"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "WYm14kysATs",
+                "e5MEbC0H0gs",
+                "xVCjBEgtLe0",
+                "OV1lamUaTfI",
+                "FP_1OtBdkQo"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "matches": [
+            {
+              "id": "115660588583040710",
+              "start": "2026-10-15T23:00:00Z",
+              "teams": [
+                "MVK",
+                "FUR"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "Iz6QPIcnnOc",
+                "RUoeVBee-Ck",
+                "FbhRHfQz1EU",
+                "",
+                ""
+              ]
+            },
+            {
+              "id": "115660588583171790",
+              "start": "2026-10-16T18:00:00Z",
+              "teams": [
+                "KC",
+                "MVK"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "YdzTM5T1VmY",
+                "uCVmoz_74t0",
+                "X6hpjjlpPlM",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-10-17",
+          "matches": [
+            {
+              "id": "115660588583171794",
+              "start": "2026-10-16T23:00:00Z",
+              "teams": [
+                "FUR",
+                "C9"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "mVIp_b96_cQ",
+                "9fKtIXCH0TU",
+                "B9_H10wvlpE",
+                "bj0kTIMgN0k",
+                ""
+              ]
+            },
+            {
+              "id": "115660588583171798",
+              "start": "2026-10-17T18:00:00Z",
+              "teams": [
+                "MVK",
+                "FUR"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "pz7rJMlyGes",
+                "KBUcyEGM3E8",
+                "kzqKwvTxDxI",
+                "IURKCijh8G4",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-10-18",
+          "matches": [
+            {
+              "id": "116299649498303884",
+              "start": "2026-10-18T18:00:00Z",
+              "teams": [
+                "KC",
+                "MVK"
+              ],
+              "slots": 5,
+              "ready": true,
+              "games": [
+                "1_8VG2UwRGw",
+                "uvKxDdesBE0",
+                "h7187ANasow",
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Swiss",
+      "days": [
+        {
+          "date": "2026-10-23",
+          "matches": [
+            {
+              "id": "115660540726095005",
+              "start": "2026-10-23T17:00:00Z",
+              "teams": [
+                "GEN",
+                "IG"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095007",
+              "start": "2026-10-23T18:00:00Z",
+              "teams": [
+                "TLAW",
+                "CFO"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095009",
+              "start": "2026-10-23T19:00:00Z",
+              "teams": [
+                "AL",
+                "KC"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095011",
+              "start": "2026-10-23T20:00:00Z",
+              "teams": [
+                "G2",
+                "DK"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095013",
+              "start": "2026-10-23T21:00:00Z",
+              "teams": [
+                "HLE",
+                "TES"
+              ],
+              "slots": 3,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-10-24",
+          "matches": [
+            {
+              "id": "115660540726095015",
+              "start": "2026-10-23T22:00:00Z",
+              "teams": [
+                "LOS",
+                "T1"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095017",
+              "start": "2026-10-23T23:00:00Z",
+              "teams": [
+                "TSW",
+                "LYON"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095019",
+              "start": "2026-10-24T00:00:00Z",
+              "teams": [
+                "BLG",
+                "MKOI"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095021",
+              "start": "2026-10-24T17:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095023",
+              "start": "2026-10-24T18:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095025",
+              "start": "2026-10-24T19:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095027",
+              "start": "2026-10-24T20:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095029",
+              "start": "2026-10-24T21:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-10-25",
+          "matches": [
+            {
+              "id": "115660540726095031",
+              "start": "2026-10-24T22:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095033",
+              "start": "2026-10-24T23:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095035",
+              "start": "2026-10-25T00:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095045",
+              "start": "2026-10-25T17:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095047",
+              "start": "2026-10-25T18:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095037",
+              "start": "2026-10-25T19:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095041",
+              "start": "2026-10-25T22:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-10-26",
+          "matches": [
+            {
+              "id": "115660540726095049",
+              "start": "2026-10-26T17:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095051",
+              "start": "2026-10-26T18:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095053",
+              "start": "2026-10-26T19:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095057",
+              "start": "2026-10-26T22:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-10-28",
+          "matches": [
+            {
+              "id": "115660540726095061",
+              "start": "2026-10-28T20:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-10-29",
+          "matches": [
+            {
+              "id": "115660540726095065",
+              "start": "2026-10-28T23:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095069",
+              "start": "2026-10-29T20:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "matches": [
+            {
+              "id": "115660540726095073",
+              "start": "2026-10-29T23:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095077",
+              "start": "2026-10-30T20:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-10-31",
+          "matches": [
+            {
+              "id": "115660540726095081",
+              "start": "2026-10-30T23:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095085",
+              "start": "2026-10-31T17:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            },
+            {
+              "id": "115660540726095089",
+              "start": "2026-10-31T20:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-11-01",
+          "matches": [
+            {
+              "id": "115660540726095093",
+              "start": "2026-10-31T23:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 3,
+              "ready": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quarterfinals",
+      "days": [
+        {
+          "date": "2026-11-03",
+          "matches": [
+            {
+              "id": "115660540726095097",
+              "start": "2026-11-03T22:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 5,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "matches": [
+            {
+              "id": "115660540726095103",
+              "start": "2026-11-04T22:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 5,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "matches": [
+            {
+              "id": "115660540726095109",
+              "start": "2026-11-05T22:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 5,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-11-06",
+          "matches": [
+            {
+              "id": "115660540726095115",
+              "start": "2026-11-06T22:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 5,
+              "ready": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semifinals",
+      "days": [
+        {
+          "date": "2026-11-07",
+          "matches": [
+            {
+              "id": "115660540726095121",
+              "start": "2026-11-07T22:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 5,
+              "ready": false
+            }
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "matches": [
+            {
+              "id": "115660540726095127",
+              "start": "2026-11-08T22:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 5,
+              "ready": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Finals",
+      "days": [
+        {
+          "date": "2026-11-14",
+          "matches": [
+            {
+              "id": "115660540726095133",
+              "start": "2026-11-14T19:00:00Z",
+              "teams": [
+                "TBD",
+                "TBD"
+              ],
+              "slots": 5,
+              "ready": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

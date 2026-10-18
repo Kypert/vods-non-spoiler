@@ -20,6 +20,10 @@ import (
 // MaxUploadDelay is how long after the series start we accept an upload for it
 const MaxUploadDelay = 48 * time.Hour
 
+// MaxUploadEarly is how long before the series start we accept an upload for it. Riot's start
+// time is not always the real start, e.g. Worlds 2026 FUR vs C9 had uploads 80 min before it.
+const MaxUploadEarly = 6 * time.Hour
+
 // Examples:
 //
 //	"WE vs BFX - Game 1 | Final Demacia Cup Global Invitational 2026 | ..."
@@ -79,11 +83,11 @@ func Join(matches []riot.Match, videos []youtube.Video, aliases map[string]strin
 		if !ok {
 			continue
 		}
-		// Pick the latest series of these teams that started before the upload
+		// Pick the latest series of these teams that started before the upload (with tolerance)
 		var best *riot.Match
 		for i := range matches {
 			m := &matches[i]
-			if !sameTeams(*m, g) || m.StartTime.After(v.Published) || v.Published.Sub(m.StartTime) > MaxUploadDelay {
+			if !sameTeams(*m, g) || m.StartTime.After(v.Published.Add(MaxUploadEarly)) || v.Published.Sub(m.StartTime) > MaxUploadDelay {
 				continue
 			}
 			if best == nil || m.StartTime.After(best.StartTime) {
