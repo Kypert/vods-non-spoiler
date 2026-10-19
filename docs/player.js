@@ -142,7 +142,18 @@ function setup(videoId) {
   let player;
   let timer;
   let started = false;
-  const applySpeed = () => player.setPlaybackRate(Number(speed.value));
+  // Mobile players can drop a rate set before playback and still report it, so we do not
+  // trust getPlaybackRate(). We set the rate again on each play and when YouTube changes it.
+  const wanted = () => Number(speed.value);
+  const applySpeed = () => player?.setPlaybackRate && player.setPlaybackRate(wanted());
+  let resets = 0;
+  const onRateChange = (e) => {
+    // Limit retries, in case the player does not support the rate at all
+    if (e.data !== wanted() && resets < 3) {
+      resets++;
+      applySpeed();
+    }
+  };
 
   window.onYouTubeIframeAPIReady = () => {
     player = new YT.Player("yt", {
@@ -151,6 +162,7 @@ function setup(videoId) {
       playerVars: { controls: 0, rel: 0, disablekb: 1, fs: 0, iv_load_policy: 3, playsinline: 1 },
       events: {
         onReady: applySpeed,
+        onPlaybackRateChange: onRateChange,
         onStateChange: (e) => {
           playing = e.data === YT.PlayerState.PLAYING;
           if (playing) started = true;
@@ -158,7 +170,11 @@ function setup(videoId) {
           cover.classList.remove("passthrough");
           cover.textContent = e.data === YT.PlayerState.PAUSED ? "Paused" : "Tap to play";
           $("play").textContent = playing ? "Pause" : "Play";
-          if (playing && player.getPlaybackRate() !== Number(speed.value)) applySpeed();
+          if (playing) {
+            applySpeed();
+            // Again after the stream has started, some players reset the rate at that point
+            setTimeout(applySpeed, 1000);
+          }
           showControls();
           if (e.data === YT.PlayerState.ENDED) {
             clearInterval(timer);
@@ -212,7 +228,8 @@ function setup(videoId) {
   document.querySelectorAll("[data-seek]").forEach((b) => b.addEventListener("click", () => seek(Number(b.dataset.seek))));
   speed.addEventListener("change", () => {
     localStorage.setItem("speed", speed.value);
-    if (player) applySpeed();
+    resets = 0;
+    applySpeed();
   });
   document.addEventListener("keydown", (e) => {
     showControls();
