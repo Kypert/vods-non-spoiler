@@ -2,7 +2,8 @@
 // site data.
 //
 // Rule: nothing in the output may tell the result of a series. No scores, no records, no
-// outcome, no hint of the number of games played, and no difference between Bo1 and Bo3.
+// outcome, and no hint of the number of games played. The series format (Bo1, Bo3, Bo5) is
+// shown, because the schedule tells it before the series is played.
 package vods
 
 import (
@@ -181,12 +182,6 @@ func Build(tournament string, matches []riot.Match, games map[string]map[int]str
 	sorted := slices.Clone(matches)
 	slices.SortStableFunc(sorted, func(a, b riot.Match) int { return a.StartTime.Compare(b.StartTime) })
 
-	// All series in a stage get the same number of slots, so Bo1 and Bo3 look the same
-	slots := map[string]int{}
-	for _, m := range sorted {
-		slots[m.Block] = max(slots[m.Block], m.BestOf)
-	}
-
 	site := Site{Tournament: tournament, Name: DisplayName(tournament), Generated: now.UTC(), Stages: []Stage{}}
 	stageIdx := map[string]int{}
 	for _, m := range sorted {
@@ -204,7 +199,7 @@ func Build(tournament string, matches []riot.Match, games map[string]map[int]str
 		}
 		day := &st.Days[len(st.Days)-1]
 
-		card := Card{ID: m.ID, Start: m.StartTime.UTC(), Slots: slots[m.Block]}
+		card := Card{ID: m.ID, Start: m.StartTime.UTC(), Slots: m.BestOf}
 		for i := 0; i < 2 && i < len(m.Teams); i++ {
 			card.Teams[i] = cmp.Or(m.Teams[i].Code, m.Teams[i].Name)
 		}

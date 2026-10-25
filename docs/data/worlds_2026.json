@@ -1,7 +1,7 @@
 {
   "tournament": "worlds_2026",
   "name": "Worlds 2026",
-  "generated": "2026-10-25T11:52:48.53257067Z",
+  "generated": "2026-10-25T12:11:28.041238675Z",
   "stages": [
     {
       "name": "Play-Ins",
@@ -143,12 +143,10 @@
                 "IG",
                 "GEN"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "m16dnebeasw",
-                "",
-                ""
+                "m16dnebeasw"
               ]
             },
             {
@@ -158,12 +156,10 @@
                 "TES",
                 "HLE"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "NVYpY__2wuk",
-                "",
-                ""
+                "NVYpY__2wuk"
               ]
             },
             {
@@ -173,12 +169,10 @@
                 "MKOI",
                 "BLG"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "q3wbp6guPfE",
-                "",
-                ""
+                "q3wbp6guPfE"
               ]
             },
             {
@@ -188,12 +182,10 @@
                 "KC",
                 "AL"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "oL7SoVo7diQ",
-                "",
-                ""
+                "oL7SoVo7diQ"
               ]
             },
             {
@@ -203,12 +195,10 @@
                 "DK",
                 "G2"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "QrPBT4lXtFM",
-                "",
-                ""
+                "QrPBT4lXtFM"
               ]
             }
           ]
@@ -223,12 +213,10 @@
                 "TLAW",
                 "CFO"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "G_KDpt_CLmY",
-                "",
-                ""
+                "G_KDpt_CLmY"
               ]
             },
             {
@@ -238,12 +226,10 @@
                 "LOS",
                 "T1"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "cTwRGyrhvlg",
-                "",
-                ""
+                "cTwRGyrhvlg"
               ]
             },
             {
@@ -253,12 +239,10 @@
                 "LYON",
                 "TSW"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "feWyEjzJmKc",
-                "",
-                ""
+                "feWyEjzJmKc"
               ]
             },
             {
@@ -268,12 +252,10 @@
                 "TES",
                 "AL"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "lOL84yhLhyk",
-                "",
-                ""
+                "lOL84yhLhyk"
               ]
             },
             {
@@ -283,12 +265,10 @@
                 "MKOI",
                 "CFO"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "Xt2D5kiy9Fo",
-                "",
-                ""
+                "Xt2D5kiy9Fo"
               ]
             },
             {
@@ -298,12 +278,10 @@
                 "LOS",
                 "G2"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "f_6eOBMTW5Y",
-                "",
-                ""
+                "f_6eOBMTW5Y"
               ]
             },
             {
@@ -313,12 +291,10 @@
                 "KC",
                 "LYON"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "N157oBk7iGI",
-                "",
-                ""
+                "N157oBk7iGI"
               ]
             },
             {
@@ -328,12 +304,10 @@
                 "TSW",
                 "IG"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "mva8OALSadc",
-                "",
-                ""
+                "mva8OALSadc"
               ]
             }
           ]
@@ -348,12 +322,10 @@
                 "HLE",
                 "GEN"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "Ug0fDom1mIU",
-                "",
-                ""
+                "Ug0fDom1mIU"
               ]
             },
             {
@@ -363,12 +335,10 @@
                 "DK",
                 "T1"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "CH58ZuCC_lQ",
-                "",
-                ""
+                "CH58ZuCC_lQ"
               ]
             },
             {
@@ -378,12 +348,10 @@
                 "TLAW",
                 "BLG"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": true,
               "games": [
-                "IQjtHGojxQ8",
-                "",
-                ""
+                "IQjtHGojxQ8"
               ]
             },
             {
@@ -393,7 +361,7 @@
                 "HLE",
                 "IG"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": false
             },
             {
@@ -403,7 +371,7 @@
                 "G2",
                 "TES"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": false
             },
             {
@@ -438,7 +406,7 @@
                 "CFO",
                 "T1"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": false
             },
             {
@@ -448,7 +416,7 @@
                 "BLG",
                 "KC"
               ],
-              "slots": 3,
+              "slots": 1,
               "ready": false
             },
             {

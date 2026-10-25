@@ -141,9 +141,12 @@ func TestBuildHidesSeriesLength(t *testing.T) {
 			}
 		}
 	}
-	// Bo1 and Bo3 in the same stage must look the same
-	if cards["bo1"].Slots != 3 || cards["bo3"].Slots != 3 {
-		t.Errorf("swiss slots = %d, %d, want 3", cards["bo1"].Slots, cards["bo3"].Slots)
+	// Each series gets slots for its format, and unplayed games are dummy slots
+	if c := cards["bo1"]; c.Slots != 1 || len(c.Games) != 1 {
+		t.Errorf("bo1 = %+v", c)
+	}
+	if c := cards["bo3"]; c.Slots != 3 || len(c.Games) != 3 || c.Games[2] != "" {
+		t.Errorf("bo3 = %+v", c)
 	}
 	if c := cards["stomp"]; !c.Ready || len(c.Games) != 5 || c.Games[3] != "" || c.Games[4] != "" {
 		t.Errorf("stomp = %+v", c)
