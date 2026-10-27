@@ -1,7 +1,7 @@
 {
   "tournament": "worlds_2026",
   "name": "Worlds 2026",
-  "generated": "2026-10-25T12:11:28.041238675Z",
+  "generated": "2026-10-27T21:12:00.982971964Z",
   "stages": [
     {
       "name": "Play-Ins",
@@ -358,21 +358,27 @@
               "id": "115660540726095045",
               "start": "2026-10-25T17:00:00Z",
               "teams": [
-                "HLE",
-                "IG"
+                "IG",
+                "HLE"
               ],
               "slots": 1,
-              "ready": false
+              "ready": true,
+              "games": [
+                "rxkYf8BOHSQ"
+              ]
             },
             {
               "id": "115660540726095047",
               "start": "2026-10-25T18:00:00Z",
               "teams": [
-                "G2",
-                "TES"
+                "TES",
+                "G2"
               ],
               "slots": 1,
-              "ready": false
+              "ready": true,
+              "games": [
+                "jWNJ6OjhdLA"
+              ]
             },
             {
               "id": "115660540726095037",
@@ -388,11 +394,16 @@
               "id": "115660540726095041",
               "start": "2026-10-25T22:00:00Z",
               "teams": [
-                "GEN",
-                "LYON"
+                "LYON",
+                "GEN"
               ],
               "slots": 3,
-              "ready": false
+              "ready": true,
+              "games": [
+                "zNTyYcB20Mg",
+                "o5HDC3Xp6qY",
+                "oyEuf2odwdY"
+              ]
             }
           ]
         },
@@ -403,11 +414,14 @@
               "id": "115660540726095049",
               "start": "2026-10-26T17:00:00Z",
               "teams": [
-                "CFO",
-                "T1"
+                "T1",
+                "CFO"
               ],
               "slots": 1,
-              "ready": false
+              "ready": true,
+              "games": [
+                "WV7BvEDNdDA"
+              ]
             },
             {
               "id": "115660540726095051",
@@ -417,27 +431,40 @@
                 "KC"
               ],
               "slots": 1,
-              "ready": false
+              "ready": true,
+              "games": [
+                "R-_joRehigM"
+              ]
             },
             {
               "id": "115660540726095053",
               "start": "2026-10-26T19:00:00Z",
               "teams": [
-                "LOS",
-                "TSW"
+                "TSW",
+                "LOS"
               ],
               "slots": 3,
-              "ready": false
+              "ready": true,
+              "games": [
+                "ZMBcGhBkPo4",
+                "1-ZLFEJFTos",
+                ""
+              ]
             },
             {
               "id": "115660540726095057",
               "start": "2026-10-26T22:00:00Z",
               "teams": [
-                "TLAW",
-                "AL"
+                "AL",
+                "TLAW"
               ],
               "slots": 3,
-              "ready": false
+              "ready": true,
+              "games": [
+                "9s4_K7i6B0k",
+                "wjoQ0ze5bJ4",
+                ""
+              ]
             }
           ]
         },
@@ -448,8 +475,8 @@
               "id": "115660540726095061",
               "start": "2026-10-28T20:00:00Z",
               "teams": [
-                "TBD",
-                "TBD"
+                "MKOI",
+                "T1"
               ],
               "slots": 3,
               "ready": false
@@ -463,18 +490,18 @@
               "id": "115660540726095065",
               "start": "2026-10-28T23:00:00Z",
               "teams": [
-                "TBD",
-                "TBD"
+                "LYON",
+                "IG"
               ],
               "slots": 3,
               "ready": false
             },
             {
-              "id": "115660540726095069",
+              "id": "115660540726095073",
               "start": "2026-10-29T20:00:00Z",
               "teams": [
-                "TBD",
-                "TBD"
+                "CFO",
+                "KC"
               ],
               "slots": 3,
               "ready": false
@@ -485,11 +512,11 @@
           "date": "2026-10-30",
           "matches": [
             {
-              "id": "115660540726095073",
+              "id": "115660540726095069",
               "start": "2026-10-29T23:00:00Z",
               "teams": [
-                "TBD",
-                "TBD"
+                "BLG",
+                "TES"
               ],
               "slots": 3,
               "ready": false
@@ -498,8 +525,8 @@
               "id": "115660540726095077",
               "start": "2026-10-30T20:00:00Z",
               "teams": [
-                "TBD",
-                "TBD"
+                "TLAW",
+                "LOS"
               ],
               "slots": 3,
               "ready": false
@@ -513,8 +540,8 @@
               "id": "115660540726095081",
               "start": "2026-10-30T23:00:00Z",
               "teams": [
-                "TBD",
-                "TBD"
+                "G2",
+                "HLE"
               ],
               "slots": 3,
               "ready": false
