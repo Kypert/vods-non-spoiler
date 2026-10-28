@@ -18,6 +18,7 @@ func TestParseTitle(t *testing.T) {
 	}{
 		{"WE vs BFX - Game 1 | Final Demacia Cup Global Invitational 2026 | Team WE vs BNK FEARX G1 full", Game{"WE", "BFX", 1}, true},
 		{"FUR vs C9 - Game 4 | Round 1 S16 LoL Worlds 2026 Play-Ins | FURIA vs Cloud 9 G4 Full", Game{"FUR", "C9", 4}, true},
+		{"MKOI vs DK - Game 1 (Bo3) | Day 3 LoL Worlds 2026 Swiss Stage | Movistar KOI vs Dplus KIA G1 full", Game{"MKOI", "DK", 1}, true},
 		{"MVK vs FUR - All Games (Bo5) | Round 2 S16 LoL Worlds 2026 Play-Ins | mega-vod", Game{}, false},
 		{"KC vs MVK + C9 vs FUR - All Games | Worlds 2026 Play-Ins Day 2 full day mega-vod", Game{}, false},
 		{"fly vs t1 - game 2 | x", Game{"FLY", "T1", 2}, true},

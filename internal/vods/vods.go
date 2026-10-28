@@ -28,8 +28,9 @@ const MaxUploadEarly = 6 * time.Hour
 // Examples:
 //
 //	"WE vs BFX - Game 1 | Final Demacia Cup Global Invitational 2026 | ..."
+//	"MKOI vs DK - Game 1 (Bo3) | Day 3 LoL Worlds 2026 Swiss Stage | ..." (series format after game number)
 //	"RED vs NAVI | Day 1 Demacia Cup Global Invitational 2026 | ... full" (Bo1, no game number)
-var titleRe = regexp.MustCompile(`(?i)^\s*([^\s|]+)\s+vs\.?\s+([^\s|]+)\s+(?:-\s+Game\s+(\d+)\s*)?\|`)
+var titleRe = regexp.MustCompile(`(?i)^\s*([^\s|]+)\s+vs\.?\s+([^\s|]+)\s+(?:-\s+Game\s+(\d+)\s*(?:\(Bo\d+\)\s*)?)?\|`)
 
 // Game is a parsed upload title. Number is 0 when the title has no game number.
 type Game struct {
