@@ -1,7 +1,7 @@
 {
   "tournament": "worlds_2026",
   "name": "Worlds 2026",
-  "generated": "2026-10-28T12:14:20.791024606Z",
+  "generated": "2026-10-28T23:41:40.440990142Z",
   "stages": [
     {
       "name": "Play-Ins",
@@ -480,11 +480,16 @@
               "id": "115660540726095061",
               "start": "2026-10-28T20:00:00Z",
               "teams": [
-                "MKOI",
-                "T1"
+                "T1",
+                "MKOI"
               ],
               "slots": 3,
-              "ready": false
+              "ready": true,
+              "games": [
+                "h4qcxKUU8mg",
+                "O-j6q9uQCWA",
+                ""
+              ]
             }
           ]
         },
