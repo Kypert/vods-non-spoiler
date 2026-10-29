@@ -1,7 +1,7 @@
 {
   "tournament": "worlds_2026",
   "name": "Worlds 2026",
-  "generated": "2026-10-28T23:41:40.440990142Z",
+  "generated": "2026-10-29T20:41:56.567576508Z",
   "stages": [
     {
       "name": "Play-Ins",
@@ -504,14 +504,19 @@
                 "IG"
               ],
               "slots": 3,
-              "ready": false
+              "ready": true,
+              "games": [
+                "aNJVfHmmn1o",
+                "4ZmUgBZLWGM",
+                "CS5Fs8VcdbM"
+              ]
             },
             {
               "id": "115660540726095073",
               "start": "2026-10-29T20:00:00Z",
               "teams": [
-                "CFO",
-                "KC"
+                "KC",
+                "CFO"
               ],
               "slots": 3,
               "ready": false
