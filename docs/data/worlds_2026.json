@@ -1,7 +1,7 @@
 {
   "tournament": "worlds_2026",
   "name": "Worlds 2026",
-  "generated": "2026-10-30T23:18:38.886207354Z",
+  "generated": "2026-10-31T22:37:22.759478485Z",
   "stages": [
     {
       "name": "Play-Ins",
@@ -574,27 +574,42 @@
                 "HLE"
               ],
               "slots": 3,
-              "ready": false
+              "ready": true,
+              "games": [
+                "HaQxFHHhfis",
+                "vl4FpiYYYco",
+                ""
+              ]
             },
             {
               "id": "115660540726095085",
               "start": "2026-10-31T17:00:00Z",
               "teams": [
-                "TBD",
-                "TBD"
+                "KC",
+                "MKOI"
               ],
               "slots": 3,
-              "ready": false
+              "ready": true,
+              "games": [
+                "Zhe3Li-omno",
+                "5Q0PbKDuGTw",
+                ""
+              ]
             },
             {
               "id": "115660540726095089",
               "start": "2026-10-31T20:00:00Z",
               "teams": [
-                "TBD",
-                "TBD"
+                "LYON",
+                "LOS"
               ],
               "slots": 3,
-              "ready": false
+              "ready": true,
+              "games": [
+                "PFs7dcTtWd0",
+                "UepYrc26y-k",
+                "JxCgVYVrLWI"
+              ]
             }
           ]
         },
@@ -605,8 +620,8 @@
               "id": "115660540726095093",
               "start": "2026-10-31T23:00:00Z",
               "teams": [
-                "TBD",
-                "TBD"
+                "BLG",
+                "HLE"
               ],
               "slots": 3,
               "ready": false
