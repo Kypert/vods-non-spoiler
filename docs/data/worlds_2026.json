@@ -1,7 +1,7 @@
 {
   "tournament": "worlds_2026",
   "name": "Worlds 2026",
-  "generated": "2026-11-02T11:06:40.831149412Z",
+  "generated": "2026-11-04T20:38:04.058092996Z",
   "stages": [
     {
       "name": "Play-Ins",
@@ -645,11 +645,18 @@
               "id": "115660540726095109",
               "start": "2026-11-03T22:00:00Z",
               "teams": [
-                "TES",
-                "IG"
+                "IG",
+                "TES"
               ],
               "slots": 5,
-              "ready": false
+              "ready": true,
+              "games": [
+                "ZTj_jgTeIrI",
+                "kYLobCETQgg",
+                "0MoD2lr73Qw",
+                "Jd1prrmmM3U",
+                ""
+              ]
             }
           ]
         },
@@ -711,7 +718,7 @@
               "start": "2026-11-07T22:00:00Z",
               "teams": [
                 "TBD",
-                "TBD"
+                "IG"
               ],
               "slots": 5,
               "ready": false
