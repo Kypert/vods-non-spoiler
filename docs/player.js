@@ -155,13 +155,28 @@ function setup(videoId) {
     }
   };
 
+  // No player parameter turns captions off (cc_load_policy can only force them on), and the
+  // captions module can load late. So we use the undocumented module calls on each chance.
+  const noCaptions = () => {
+    try {
+      player.setOption("captions", "track", {});
+      player.unloadModule("captions");
+    } catch {
+      // The module is not loaded yet
+    }
+  };
+
   window.onYouTubeIframeAPIReady = () => {
     player = new YT.Player("yt", {
       host: "https://www.youtube-nocookie.com",
       videoId,
       playerVars: { controls: 0, rel: 0, disablekb: 1, fs: 0, iv_load_policy: 3, playsinline: 1 },
       events: {
-        onReady: applySpeed,
+        onReady: () => {
+          applySpeed();
+          noCaptions();
+        },
+        onApiChange: noCaptions,
         onPlaybackRateChange: onRateChange,
         onStateChange: (e) => {
           playing = e.data === YT.PlayerState.PLAYING;
@@ -172,6 +187,7 @@ function setup(videoId) {
           $("play").textContent = playing ? "Pause" : "Play";
           if (playing) {
             applySpeed();
+            noCaptions();
             // Again after the stream has started, some players reset the rate at that point
             setTimeout(applySpeed, 1000);
           }
